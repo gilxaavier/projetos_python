@@ -7,6 +7,7 @@ cor3 = "#38576b"
 cor4 = "#ECEFF1"
 cor5 = "#FFAB40"
 
+
 janela = Tk()
 janela.title("Calculadora")
 janela.geometry("235x310")
@@ -22,7 +23,7 @@ app_label = Label(frame_tela, text="123456789", width=16, height=2, padx=7, reli
 app_label.place(x=0, y=0 )
 
 
-
+#Botões
 b_1 = Button(frame_corpo, text="C", width=11, height=2, bg=cor4, font=("Ivy 13 bold"), relief=RAISED, overrelief=RIDGE)
 b_1.place(x=0, y=0)
 b_2 = Button(frame_corpo, text="%", width=5, height=2, bg=cor4 , font=("Ivy 13 bold"), relief=RAISED, overrelief=RIDGE)
