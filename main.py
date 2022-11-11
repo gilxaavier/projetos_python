@@ -21,6 +21,7 @@ frame_corpo.grid(row=1, column=0)
 
 
 valores_gerais = ""
+valor_str = StringVar()
 
 def valores(numero):
     
@@ -28,8 +29,12 @@ def valores(numero):
     valores_gerais = valores_gerais + str(numero)
     
     valor_str.set(valores_gerais)
+    
+def calcular():
+    resultado = eval(valores_gerais)
+    print(resultado)
+    
 
-valor_str = StringVar()
 
 app_label = Label(frame_tela, textvariable=valor_str, width=16, height=2, padx=7, relief=FLAT, anchor="e", justify=RIGHT, font=("Ivy 17"), bg=cor3, fg=cor2)
 app_label.place(x=0, y=0 )
@@ -75,7 +80,7 @@ b_16 = Button(frame_corpo, command= lambda: valores("0"), text="0", width=11, he
 b_16.place(x=0, y =208)
 b_17 = Button(frame_corpo, command= lambda: valores("."), text=".", width=5, height=2, bg=cor4, font=("Ivy 13 bold"), relief=RAISED, overrelief=RIDGE)
 b_17.place(x=118, y =208)
-b_18 = Button(frame_corpo, command= lambda: valores("="), text="=", width=5, height=2, bg=cor4 , font=("Ivy 13 bold"), relief=RAISED, overrelief=RIDGE)
+b_18 = Button(frame_corpo, command=calcular, text="=", width=5, height=2, bg=cor4 , font=("Ivy 13 bold"), relief=RAISED, overrelief=RIDGE)
 b_18.place(x=177, y =208)
 
 
