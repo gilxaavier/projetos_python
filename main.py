@@ -33,6 +33,12 @@ def valores(numero):
 def calcular():
     resultado = eval(valores_gerais)
     print(resultado)
+
+def limpeza ():
+    global valores_gerais
+    valores_gerais = ""
+    valor_str.set("")
+    
     
 
 
@@ -41,7 +47,7 @@ app_label.place(x=0, y=0 )
 
 
 #Botões
-b_1 = Button(frame_corpo, text="C", width=11, height=2, bg=cor4, font=("Ivy 13 bold"), relief=RAISED, overrelief=RIDGE)
+b_1 = Button(frame_corpo, command=limpeza ,text="C", width=11, height=2, bg=cor4, font=("Ivy 13 bold"), relief=RAISED, overrelief=RIDGE)
 b_1.place(x=0, y=0)
 b_2 = Button(frame_corpo, command= lambda: valores("%") ,text="%", width=5, height=2, bg=cor4 , font=("Ivy 13 bold"), relief=RAISED, overrelief=RIDGE)
 b_2.place(x=118, y =0)
