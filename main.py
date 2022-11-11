@@ -31,17 +31,16 @@ def valores(numero):
     valor_str.set(valores_gerais)
     
 def calcular():
+    global valores_gerais
     resultado = eval(valores_gerais)
-    print(resultado)
+    
+    valor_str.set(str(resultado))
 
 def limpeza ():
     global valores_gerais
     valores_gerais = ""
     valor_str.set("")
     
-    
-
-
 app_label = Label(frame_tela, textvariable=valor_str, width=16, height=2, padx=7, relief=FLAT, anchor="e", justify=RIGHT, font=("Ivy 17"), bg=cor3, fg=cor2)
 app_label.place(x=0, y=0 )
 
