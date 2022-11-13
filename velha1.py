@@ -48,3 +48,28 @@ if posicao_x ==8:
 print(f"|{peca0}|{peca1}|{peca2} ")
 print(f"|{peca3}|{peca4}|{peca5} ")
 print(f"|{peca6}|{peca7}|{peca8} ")
+
+posicao_o = int(input("Digite a posição da peça o (0-8: \n"))
+
+if posicao_o == 0:
+    peca0 = "o" 
+if posicao_o == 1:
+    peca1 = "o" 
+if posicao_o == 2:
+    peca2 = "o" 
+if posicao_o == 3:
+    peca3 = "o" 
+if posicao_o == 4:
+    peca4 = "o" 
+if posicao_o == 5:
+    peca5 = "o" 
+if posicao_o == 6:
+    peca6 = "o" 
+if posicao_o == 7:
+    peca7 = "o" 
+if posicao_o == 8:
+    peca8 = "o" 
+
+print(f"|{peca0}|{peca1}|{peca2} ")
+print(f"|{peca3}|{peca4}|{peca5} ")
+print(f"|{peca6}|{peca7}|{peca8} ")
