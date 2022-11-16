@@ -26,11 +26,18 @@ def relogio():
     dia = tempo.day
     mes = tempo.strftime("%B")
     ano = tempo.strftime("%Y")
+    
+    l1.config(text=hora)
+    l1.after(200, relogio)
+    l2.config(text=dia_semana + " " + str(dia)
+              + "/" + str(mes) + "/" + str(ano))
+    
 
-l1 = Label(janela, text="00:00:00", font=("Arial 80"), bg=fundo, fg= cor)
-
+l1 = Label(janela, text="", font=("Arial 80"), bg=fundo, fg= cor)
 l1.grid(row=0, column=0, sticky=NW, padx=5)
 
-# print(hora, mes, ano)
+l2 = Label(janela, text="", font=("Arial 20"), bg=fundo, fg= cor)
+l2.grid(row=1, column=0, sticky=NW, padx=5)
 
+relogio()
 janela.mainloop()
