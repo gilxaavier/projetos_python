@@ -14,18 +14,23 @@ cor = cor2
 
 janela = Tk()
 
-janela.title()
+janela.title("")
 janela.geometry("440x180")
 janela.resizable(width=FALSE, height=FALSE)
 janela.configure(bg=cor1)
 
-tempo = datetime.now()
+def relogio():
+    tempo = datetime.now()
+    hora = tempo.strftime("%H:%M:%S")
+    dia_semana = tempo.strftime("%A")
+    dia = tempo.day
+    mes = tempo.strftime("%B")
+    ano = tempo.strftime("%Y")
 
-hora = tempo.strftime("%H:%M:%S")
-dia_semana = tempo.strftime("%A")
-dia = tempo.day
-mes = tempo.strftime("%b")
+l1 = Label(janela, text="00:00:00", font=("Arial 80"), bg=fundo, fg= cor)
 
-print(hora)
+l1.grid(row=0, column=0, sticky=NW, padx=5)
+
+# print(hora, mes, ano)
 
 janela.mainloop()
