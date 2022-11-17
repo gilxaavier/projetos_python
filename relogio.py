@@ -2,6 +2,9 @@ from tkinter import *
 from datetime import datetime
 import tkinter as tk
 
+import pyglet
+pyglet.font.add_file('digital-7.ttf')
+
 cor1 = "#3d3d3d"
 cor2 = "#fafcff"
 cor3 = "#23c25c"
@@ -33,10 +36,10 @@ def relogio():
               + "/" + str(mes) + "/" + str(ano))
     
 
-l1 = Label(janela, text="", font=("Arial 80"), bg=fundo, fg= cor)
+l1 = Label(janela, text="10:05:05", font=('digital-7  80'), bg=fundo, fg=cor)
 l1.grid(row=0, column=0, sticky=NW, padx=5)
 
-l2 = Label(janela, text="", font=("Arial 20"), bg=fundo, fg= cor)
+l2 = Label(janela,  font=('digital-7  20'), bg=fundo, fg=cor)
 l2.grid(row=1, column=0, sticky=NW, padx=5)
 
 relogio()
