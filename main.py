@@ -45,7 +45,7 @@ app_label = Label(frame_tela, textvariable=valor_str, width=16, height=2, padx=7
 app_label.place(x=0, y=0 )
 
 
-#Botões
+#Botõesz
 b_1 = Button(frame_corpo, command=limpeza ,text="C", width=11, height=2, bg=cor4, font=("Ivy 13 bold"), relief=RAISED, overrelief=RIDGE)
 b_1.place(x=0, y=0)
 b_2 = Button(frame_corpo, command= lambda: valores("%") ,text="%", width=5, height=2, bg=cor4 , font=("Ivy 13 bold"), relief=RAISED, overrelief=RIDGE)
